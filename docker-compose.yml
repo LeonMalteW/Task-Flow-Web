@@ -1,0 +1,11 @@
+services:
+  taskflow-website:
+    build: .
+    image: taskflow-website:latest
+    restart: always
+    networks:
+      - nginxmanager_proxy
+
+networks:
+  nginxmanager_proxy:
+    external: true
